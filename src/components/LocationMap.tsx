@@ -27,7 +27,7 @@ const LocationMap = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold text-red-700 mb-2">Find Us</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-700 max-w-2xl mx-auto font-medium">
             Located in the heart of St. John's, Venice Pizzeria is easy to find. Stop by for dine-in or pickup!
           </p>
         </div>
@@ -50,31 +50,32 @@ const LocationMap = () => {
 
           {/* Info Section */}
           <div className="w-full md:w-1/2">
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4">Venice Pizzeria</h3>
-              <div className="space-y-3 mb-6">
-                <p className="flex items-start">
-                  <span className="mr-2">📍</span> 
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+              <h3 className="text-2xl font-bold mb-4 text-red-700">Venice Pizzeria</h3>
+              <div className="space-y-4 mb-6">
+                <p className="flex items-start text-gray-800 font-medium text-lg">
+                  <span className="mr-3 text-red-600 text-xl">📍</span> 
                   <span>{restaurantAddress}</span>
                 </p>
-                <p className="flex items-start">
-                  <span className="mr-2">📞</span> 
+                <p className="flex items-start text-gray-800 font-medium text-lg">
+                  <span className="mr-3 text-red-600 text-xl">📞</span> 
                   <span>(123) 456-7890</span>
                 </p>
-                <p className="flex items-start">
-                  <span className="mr-2">⏰</span> 
-                  <span>
-                    Monday - Thursday: 11am - 10pm<br />
-                    Friday - Saturday: 11am - 11pm<br />
-                    Sunday: 12pm - 9pm
-                  </span>
-                </p>
+                <div className="flex items-start text-gray-800 font-medium text-lg">
+                  <span className="mr-3 text-red-600 text-xl">⏰</span> 
+                  <div>
+                    <p className="font-medium">Monday - Wednesday: <span className="text-gray-900 font-semibold">11am - 11pm</span></p>
+                    <p className="font-medium">Thursday: <span className="text-gray-900 font-semibold">11am - 12pm</span></p>
+                    <p className="font-medium">Friday and Saturday: <span className="text-gray-900 font-semibold">11am - 2am</span></p>
+                    <p className="font-medium">Sunday: <span className="text-gray-900 font-semibold">11am - 12am</span></p>
+                  </div>
+                </div>
               </div>
               <Link 
                 href={googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-6 rounded-full transition duration-300"
+                className="inline-block bg-red-700 hover:bg-red-800 text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg shadow-md"
               >
                 Get Directions
               </Link>

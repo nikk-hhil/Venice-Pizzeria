@@ -9,36 +9,27 @@ const OrderOptions = () => {
       description: "Call us directly to place your order for pickup or delivery",
       phoneNumber: "(123) 456-7890",
       icon: "📞",
-      primaryColor: "bg-red-700",
+      primaryColor: "bg-red-900",
       hoverColor: "bg-red-800"
     },
     {
       id: 2,
-      name: "UberEats",
+      name: "Skip the Dishes",
       description: "Order through UberEats for delivery",
-      link: "https://www.ubereats.com/",
+      link: "https://www.skipthedishes.com/",
       icon: "🚗",
-      primaryColor: "bg-black",
-      hoverColor: "bg-gray-800"
+      primaryColor: "bg-orange-500",
+      hoverColor: "bg-orange-600"
     },
     {
       id: 3,
       name: "DoorDash",
       description: "Get your pizza delivered via DoorDash",
       link: "https://www.doordash.com/",
-      icon: "🛵",
+      icon: "🚗",
       primaryColor: "bg-red-600",
       hoverColor: "bg-red-700"
     },
-    {
-      id: 4,
-      name: "GrubHub",
-      description: "Order through GrubHub for fast delivery",
-      link: "https://www.grubhub.com/",
-      icon: "🍕",
-      primaryColor: "bg-orange-500",
-      hoverColor: "bg-orange-600"
-    }
   ];
 
   return (
@@ -46,8 +37,8 @@ const OrderOptions = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Order Your Favorite Pizza</h2>
-            <p className="text-gray-600">
+            <h2 className="text-3xl font-bold text-gray-100 mb-4">Order Your Favorite Pizza</h2>
+            <p className="text-gray-200">
               Choose your preferred ordering method below. We offer pickup and delivery options to best serve you.
             </p>
           </div>
@@ -92,12 +83,12 @@ const OrderOptions = () => {
             ))}
           </div>
           
-          <div className="mt-12 bg-gray-100 p-6 rounded-lg">
+          <div className="mt-12 bg-gray-1200 p-6 rounded-lg">
             <h3 className="font-bold text-lg mb-2">Delivery Information</h3>
-            <p className="text-gray-700 mb-4">
+            <p className="text-white-700 mb-4">
               Our delivery radius is approximately 5 miles from our restaurant. Delivery times typically range from 30-45 minutes depending on distance and current order volume.
             </p>
-            <p className="text-gray-700">
+            <p className="text-white-700">
               For large orders or catering inquiries, please call us directly at (123) 456-7890.
             </p>
           </div>
