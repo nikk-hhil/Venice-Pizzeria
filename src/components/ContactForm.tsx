@@ -1,8 +1,10 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useRef, FormEvent, ChangeEvent } from 'react';
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
+  const form = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,7 +19,9 @@ const ContactForm = () => {
     message: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -25,33 +29,49 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    // Normally you would send this data to your server or a form service
-    // This is a placeholder for demonstration
-    console.log('Form submitted:', formData);
+    // Replace these with your actual EmailJS credentials
+    const serviceId = 'service_wjy89wf';
+    const templateId = 'template_9nq5ol6';
+    const publicKey = 'm4D796ukHQNqt4ThI';
     
-    // Simulate successful submission
-    setSubmitStatus({
-      submitted: true,
-      success: true,
-      message: 'Thank you for your message! We will get back to you soon.'
-    });
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
-    });
+    if (form.current) {
+      emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+        .then((result) => {
+          setSubmitStatus({
+            submitted: true,
+            success: true,
+            message: 'Thank you for your message! We will get back to you soon.'
+          });
+          
+          // Reset form
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            subject: '',
+            message: ''
+          });
+          
+          setIsSubmitting(false);
+        })
+        .catch((error) => {
+          setSubmitStatus({
+            submitted: true,
+            success: false,
+            message: 'Something went wrong. Please try again later.'
+          });
+          setIsSubmitting(false);
+        });
+    }
   };
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold text-red-700 mb-6">Send Us a Message</h2>
+      <h2 className="text-2xl font-bold text-red-800 mb-6">Send Us a Message</h2>
       
       {submitStatus.submitted && (
         <div className={`p-4 mb-6 rounded-md ${submitStatus.success ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
@@ -59,10 +79,10 @@ const ContactForm = () => {
         </div>
       )}
       
-      <form onSubmit={handleSubmit}>
+      <form ref={form} onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+            <label htmlFor="name" className="block text-gray-800 font-medium mb-2">
               Name
             </label>
             <input
@@ -72,12 +92,12 @@ const ContactForm = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 text-gray-800"
             />
           </div>
           
           <div>
-            <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+            <label htmlFor="email" className="block text-gray-800 font-medium mb-2">
               Email
             </label>
             <input
@@ -87,12 +107,12 @@ const ContactForm = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 text-gray-800"
             />
           </div>
           
           <div>
-            <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
+            <label htmlFor="phone" className="block text-gray-800 font-medium mb-2">
               Phone Number
             </label>
             <input
@@ -101,12 +121,12 @@ const ContactForm = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 text-gray-800"
             />
           </div>
           
           <div>
-            <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">
+            <label htmlFor="subject" className="block text-gray-800 font-medium mb-2">
               Subject
             </label>
             <select
@@ -115,19 +135,19 @@ const ContactForm = () => {
               value={formData.subject}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 text-gray-800"
             >
-              <option value="">Select a subject</option>
-              <option value="general">General Inquiry</option>
-              <option value="reservation">Reservation</option>
-              <option value="feedback">Feedback</option>
-              <option value="catering">Catering</option>
+              <option value="" className="text-gray-800">Select a subject</option>
+              <option value="general" className="text-gray-800">General Inquiry</option>
+              <option value="reservation" className="text-gray-800">Reservation</option>
+              <option value="feedback" className="text-gray-800">Feedback</option>
+              <option value="catering" className="text-gray-800">Catering</option>
             </select>
           </div>
         </div>
         
         <div className="mt-6">
-          <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+          <label htmlFor="message" className="block text-gray-800 font-medium mb-2">
             Message
           </label>
           <textarea
@@ -137,16 +157,17 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             rows={5}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 text-gray-800"
           />
         </div>
         
         <div className="mt-6">
           <button
             type="submit"
-            className="px-6 py-2 bg-red-700 text-white font-bold rounded-md hover:bg-red-800 transition-colors"
+            disabled={isSubmitting}
+            className="px-6 py-2 bg-red-700 text-white font-bold rounded-md hover:bg-red-800 transition-colors disabled:bg-red-400"
           >
-            Send Message
+            {isSubmitting ? 'Sending...' : 'Send Message'}
           </button>
         </div>
       </form>

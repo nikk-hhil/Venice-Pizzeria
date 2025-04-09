@@ -59,7 +59,7 @@ const FeaturedMenu = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-red-700 mb-2">Our Specialty Pizzas</h2>
           <p className="text-gray-700 max-w-2xl mx-auto">
-            Try our customer favorites, handcrafted with fresh ingredients and baked to perfection in our wood-fired oven.
+            Try our customer favorites, handcrafted with fresh ingredients and baked to perfection.
           </p>
         </div>
 
