@@ -26,10 +26,10 @@ const LocationMap = () => {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-red-700 mb-2">Find Us</h2>
-          <p className="text-gray-700 max-w-2xl mx-auto font-medium">
-            Located in the heart of St. John's, Venice Pizzeria is easy to find. Stop by for dine-in or pickup!
-          </p>
+        <h2 className="text-3xl font-extrabold mb-6 bg-gradient-to-r from-red-700 to-red-900 bg-clip-text text-transparent tracking-tight transform hover:scale-105 transition-transform duration-300">Find Us</h2>
+        <p className="text-gray-700 max-w-2xl mx-auto font-manrope text-lg">
+    Located in the heart of St. John's, Venice Pizzeria is easy to find. Stop by for dine-in or pickup!
+  </p>
         </div>
 
         <div className="flex flex-col md:flex-row gap-8 items-center">

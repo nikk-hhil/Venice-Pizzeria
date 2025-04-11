@@ -4,12 +4,12 @@ const CallToAction = () => {
   return (
     <section className="py-16 bg-red-700 text-white">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Hungry? We Deliver!
-        </h2>
-        <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Enjoy our delicious pizzas from the comfort of your home. Order online for delivery or pickup.
-        </p>
+      <h2 className="text-3xl md:text-4xl font-extrabold mb-6 bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent tracking-tight transform hover:scale-105 transition-transform duration-300 pb-1">
+        Hungry? We Deliver!
+      </h2>
+      <p className="text-xl mb-8 max-w-2xl mx-auto font-manrope text-white">
+    Enjoy our delicious pizzas from the comfort of your home. Order online for delivery or pickup.
+  </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/order"

@@ -41,6 +41,8 @@ const Hero = () => {
                   filter: 'blur(40px)',
                   animation: `float ${circle.duration}s infinite ease-in-out`,
                   animationDelay: `${circle.delay}s`,
+                  maxWidth: '100vw', // Add this to prevent overflow
+                  overflow: 'hidden' // Add this to prevent overflow
                 }}
               />
             ))}

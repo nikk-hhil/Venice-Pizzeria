@@ -11,18 +11,18 @@ const About = () => {
             <h2 className="text-3xl font-extrabold mb-6 bg-gradient-to-r from-red-700 to-red-900 bg-clip-text text-transparent tracking-tight transform hover:scale-105 transition-transform duration-300">Our Story</h2>
   
             <div className="space-y-5">
-              <p className="mb-4 text-gray-800 text-lg font-light leading-relaxed hover:text-red-700 transition-colors duration-300">
-                We are located in the heart of downtown St. John's and have been proudly serving customers <span className="font-semibold">since 1973</span>.
-              </p>
-    
-              <p className="mb-4 text-gray-800 text-lg font-light leading-relaxed hover:text-red-700 transition-colors duration-300">
-                Every pizza is handcrafted with our signature dough, made fresh daily, and topped with locally-sourced ingredients.
-              </p>
-    
-              <p className="text-gray-800 text-lg font-light leading-relaxed hover:text-red-700 transition-colors duration-300">
-                We promise to provide best service whether you're dining in our warm, family-friendly atmosphere or ordering for delivery.
-              </p>
-                </div>
+  <p className="mb-4 text-gray-800 text-lg font-manrope leading-relaxed hover:text-red-700 transition-colors duration-300">
+    We are located in the heart of downtown St. John's and have been proudly serving customers <span className="font-semibold">since 1973</span>.
+  </p>
+  
+  <p className="mb-4 text-gray-800 text-lg font-manrope leading-relaxed hover:text-red-700 transition-colors duration-300">
+    Every pizza is handcrafted with our signature dough, made fresh daily, and topped with locally-sourced ingredients.
+  </p>
+  
+  <p className="text-gray-800 text-lg font-manrope leading-relaxed hover:text-red-700 transition-colors duration-300">
+    We promise to provide best service whether you're dining in our warm, family-friendly atmosphere or ordering for delivery.
+  </p>
+</div>
               </div>
             </div>
           </div>

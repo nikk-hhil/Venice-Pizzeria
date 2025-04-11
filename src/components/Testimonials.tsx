@@ -44,12 +44,12 @@ const Testimonials = () => {
   return (
     <section className="py-16 bg-red-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-red-700 mb-2">What Our Customers Say</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Don't just take our word for it - hear from our satisfied customers.
-          </p>
-        </div>
+      <div className="text-center mb-12">
+  <h2 className="text-3xl font-extrabold mb-2 bg-gradient-to-r from-red-700 to-red-900 bg-clip-text text-transparent tracking-tight transform hover:scale-105 transition-transform duration-300">What Our Customers Say</h2>
+  <p className="text-gray-600 max-w-2xl mx-auto font-manrope text-lg">
+    Don't just take our word for it - hear from our satisfied customers.
+  </p>
+</div>
 
         <div className="max-w-4xl mx-auto">
           <div className="relative">
