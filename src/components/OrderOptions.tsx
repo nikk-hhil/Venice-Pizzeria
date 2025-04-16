@@ -16,7 +16,7 @@ const OrderOptions = () => {
       id: 2,
       name: "Skip the Dishes",
       description: "Order through UberEats for delivery",
-      link: "https://www.skipthedishes.com/",
+      link: "https://www.skipthedishes.com/venice-pizzeria",
       icon: "🚗",
       primaryColor: "bg-orange-500",
       hoverColor: "bg-orange-600"
@@ -25,7 +25,7 @@ const OrderOptions = () => {
       id: 3,
       name: "DoorDash",
       description: "Get your pizza delivered via DoorDash",
-      link: "https://www.doordash.com/",
+      link: "https://www.doordash.com/store/venice-pizzeria-saint-john's-33442037/59468146/?event_type=autocomplete&pickup=false",
       icon: "🚗",
       primaryColor: "bg-red-600",
       hoverColor: "bg-red-700"
