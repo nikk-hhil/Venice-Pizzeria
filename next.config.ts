@@ -1,14 +1,15 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from 'next'
+
+const nextConfig: NextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
   },
-  eslint: {
-    // Disable ESLint during build
-    ignoreDuringBuilds: true,
-  },
+  // Set the base path to your repository name
+  basePath: '/Venice-Pizzeria', // Replace with your exact repository name
+  // Set the asset prefix for proper asset loading
+  assetPrefix: '/Venice-Pizzeria/', // Replace with your exact repository name
   trailingSlash: true,
 }
 
-module.exports = nextConfig
+export default nextConfig

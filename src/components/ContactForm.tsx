@@ -40,7 +40,7 @@ const ContactForm = () => {
     
     if (form.current) {
       emailjs.sendForm(serviceId, templateId, form.current, publicKey)
-        .then((_result) => {
+        .then(() => {  // Remove the parameter entirely instead of using _result
           setSubmitStatus({
             submitted: true,
             success: true,
@@ -58,7 +58,7 @@ const ContactForm = () => {
           
           setIsSubmitting(false);
         })
-        .catch((_error) => {
+        .catch(() => {  // Remove the parameter entirely instead of using _error
           setSubmitStatus({
             submitted: true,
             success: false,
