@@ -1,5 +1,4 @@
 import ContactForm from "@/components/ContactForm";
-import ContactInfo from "@/components/ContactInfo";
 
 export default function ContactPage() {
   return (
@@ -9,7 +8,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
           <p className="text-xl max-w-2xl mx-auto">
-            Have questions or feedback? We'd love to hear from you!
+            Have questions or feedback? We&apos;d love to hear from you!
           </p>
         </div>
       </div>
@@ -29,7 +28,7 @@ export default function ContactPage() {
                     <h3 className="text-lg font-bold mb-2">Address</h3>
                     <p>
                       81 Military Road<br />
-                      St. John's, NL A1C-2C8
+                      St. John&apos;s, NL A1C-2C8
                     </p>
                   </div>
                   

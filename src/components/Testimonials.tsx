@@ -47,7 +47,7 @@ const Testimonials = () => {
       <div className="text-center mb-12">
   <h2 className="text-3xl font-extrabold mb-2 bg-gradient-to-r from-red-700 to-red-900 bg-clip-text text-transparent tracking-tight transform hover:scale-105 transition-transform duration-300">What Our Customers Say</h2>
   <p className="text-gray-600 max-w-2xl mx-auto font-manrope text-lg">
-    Don't just take our word for it - hear from our satisfied customers.
+    Don&apos;t just take our word for it - hear from our satisfied customers.
   </p>
 </div>
 
@@ -82,7 +82,7 @@ const Testimonials = () => {
                   </div>
                 </div>
 
-                <p className="text-gray-700 mb-6 italic">"{testimonials[activeIndex].review}"</p>
+                <p className="text-gray-700 mb-6 italic">&quot;{testimonials[activeIndex].review}&quot;</p>
                 
                 <p className="font-bold text-red-700">— {testimonials[activeIndex].name}</p>
               </motion.div>

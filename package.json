@@ -2,16 +2,21 @@
   "name": "tmp-venice-pizzeria",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://nikk-hhii.github.io/Venice-Pizzeria",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@react-google-maps/api": "^2.20.6",
     "framer-motion": "^12.6.3",
+    "gh-pages": "^6.3.0",
     "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

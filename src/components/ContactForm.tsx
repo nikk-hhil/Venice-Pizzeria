@@ -40,7 +40,7 @@ const ContactForm = () => {
     
     if (form.current) {
       emailjs.sendForm(serviceId, templateId, form.current, publicKey)
-        .then((result) => {
+        .then((_result) => {
           setSubmitStatus({
             submitted: true,
             success: true,
@@ -58,7 +58,7 @@ const ContactForm = () => {
           
           setIsSubmitting(false);
         })
-        .catch((error) => {
+        .catch((_error) => {
           setSubmitStatus({
             submitted: true,
             success: false,

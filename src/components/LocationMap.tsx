@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import Link from 'next/link';
 
@@ -28,7 +27,7 @@ const LocationMap = () => {
         <div className="text-center mb-10">
         <h2 className="text-3xl font-extrabold mb-6 bg-gradient-to-r from-red-700 to-red-900 bg-clip-text text-transparent tracking-tight transform hover:scale-105 transition-transform duration-300">Find Us</h2>
         <p className="text-gray-700 max-w-2xl mx-auto font-manrope text-lg">
-    Located in the heart of St. John's, Venice Pizzeria is easy to find. Stop by for dine-in or pickup!
+    Located in the heart of St. John&apos;s, Venice Pizzeria is easy to find. Stop by for dine-in or pickup!
   </p>
         </div>
 

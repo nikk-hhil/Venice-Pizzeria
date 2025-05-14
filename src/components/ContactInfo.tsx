@@ -8,7 +8,7 @@ const ContactInfo = () => {
       <h3 className="text-lg font-bold mb-2 text-red-800">Address</h3>
       <p className="text-gray-800">
         81 Military Road<br />
-        St. John's, NL A1B 2B6
+        St. John&apos;s, NL A1B 2B6
       </p>
     </div>
     

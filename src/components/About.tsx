@@ -12,7 +12,7 @@ const About = () => {
   
             <div className="space-y-5">
   <p className="mb-4 text-gray-800 text-lg font-manrope leading-relaxed hover:text-red-700 transition-colors duration-300">
-    We are located in the heart of downtown St. John's and have been proudly serving customers <span className="font-semibold">since 1973</span>.
+    We are located in the heart of downtown St. John&apos;s and have been proudly serving customers <span className="font-semibold">since 1973</span>.
   </p>
   
   <p className="mb-4 text-gray-800 text-lg font-manrope leading-relaxed hover:text-red-700 transition-colors duration-300">
@@ -20,7 +20,7 @@ const About = () => {
   </p>
   
   <p className="text-gray-800 text-lg font-manrope leading-relaxed hover:text-red-700 transition-colors duration-300">
-    We promise to provide best service whether you're dining in our warm, family-friendly atmosphere or ordering for delivery.
+    We promise to provide best service whether you&apos;re dining in our warm, family-friendly atmosphere or ordering for delivery.
   </p>
 </div>
               </div>

@@ -8,7 +8,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4 border-b border-red-600 pb-2 inline-block">Visit Us</h3>
             <div className="font-manrope">
               <p className="mb-2 transition-all duration-300 hover:translate-x-1">81 Military Road</p>
-              <p className="mb-2 transition-all duration-300 hover:translate-x-1">St. John's, NL A1C-2C8</p>
+              <p className="mb-2 transition-all duration-300 hover:translate-x-1">St. John&apos;s, NL A1C-2C8</p>
               <div className="mt-4">
                 <h4 className="font-bold mb-1 text-yellow-300">Hours</h4>
                 <p className="text-sm text-gray-200">Monday - Wednesday: <span className="text-white font-semibold">11am - 11pm</span></p>
