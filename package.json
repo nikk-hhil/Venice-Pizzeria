@@ -8,8 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d out --dotfiles --no-clean"
+    "predeploy": "rimraf out && npm run build",
+    "deploy": "gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
