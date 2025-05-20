@@ -2,10 +2,10 @@
   "name": "tmp-venice-pizzeria",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nikk-hhii.github.io/Venice-Pizzeria",
+  "homepage": "https://nikk-hhil.github.io/Venice-Pizzeria",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
