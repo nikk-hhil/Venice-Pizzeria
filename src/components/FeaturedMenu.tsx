@@ -13,6 +13,8 @@ const FeaturedMenu = () => {
         { size: "Large", price: "$22.99" },
         { size: "Jumbo", price: "$26.99" }
       ],
+      image: "image/meat-lovers.jpg",
+
       popular: true
     },
     {
@@ -25,6 +27,8 @@ const FeaturedMenu = () => {
         { size: "Large", price: "$20.99" },
         { size: "Jumbo", price: "$24.99" }
       ],
+      image: "image/pepperoni-2.jpg",
+
       popular: true
     },
     {
@@ -37,6 +41,8 @@ const FeaturedMenu = () => {
         { size: "Large", price: "$22.99" },
         { size: "Jumbo", price: "$25.99" }
       ],
+      image: "image/house-special.jpg",
+
       popular: false
     },
     {
@@ -49,6 +55,8 @@ const FeaturedMenu = () => {
         { size: "Large", price: "$21.99" },
         { size: "Jumbo", price: "$24.99" }
       ],
+      image: "image/veggie.jpg",
+
       popular: false
     }
   ];
@@ -68,7 +76,12 @@ const FeaturedMenu = () => {
             <div key={item.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
               {/* Image placeholder */}
               <div className="h-48 bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-600">Pizza Image</span>
+               <img 
+                src={item.image} 
+                alt={item.name} 
+                className="w-full h-full object-cover"
+/>
+
               </div>
               
               <div className="p-4">

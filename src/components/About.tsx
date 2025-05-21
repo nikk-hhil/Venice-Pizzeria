@@ -5,7 +5,11 @@ const About = () => {
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Image placeholder - replace with actual image later */}
             <div className="w-full md:w-1/2 h-64 md:h-96 bg-gray-200 rounded-lg flex items-center justify-center">
-              <span className="text-gray-500">Restaurant Image</span>
+              <img 
+                  src="image/venice-outside.jpg" 
+                  alt="Venice Pizzeria" 
+                  className="w-full h-full object-cover"
+                />
             </div>
             <div className="w-full md:w-1/2">
             <h2 className="text-3xl font-extrabold mb-6 bg-gradient-to-r from-red-700 to-red-900 bg-clip-text text-transparent tracking-tight transform hover:scale-105 transition-transform duration-300">Our Story</h2>
